@@ -12,9 +12,8 @@ public class Crupier extends Usuario {
     
     private Mesa mesaAsignada;
 
-    public Crupier(Mesa mesaAsignada, String cedula, String contraseña, String nombreCompleto) {
+    public Crupier( String cedula, String contraseña, String nombreCompleto) {
         super(cedula, contraseña, nombreCompleto);
-        this.mesaAsignada = mesaAsignada;
     }
 
     public Mesa getMesaAsignada() {

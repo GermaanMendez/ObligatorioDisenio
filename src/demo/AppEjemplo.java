@@ -2,19 +2,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package obligatoriodisenio2;
+package demo;
+
+import InterfazGrafica.Login;
+import InterfazGrafica.MenuInicio;
 
 /**
  *
- * @author mende
+ * @author digregor
  */
-public class ObligatorioDisenio2 {
+public class AppEjemplo {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+//       new VentanaMesa().setVisible(true);
+//       new Login().setVisible(true);
+         new MenuInicio().setVisible(true);
     }
     
 }
