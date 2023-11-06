@@ -17,6 +17,8 @@ public class Mesa {
     private ArrayList<TipoApuesta>tiposApuestasHabilitadas;
     private ArrayList<Ronda>rondas;
     private ArrayList<Efecto>efectos;
+    private int nue;
+    
 
     public Mesa(Crupier crupier) {
         this.crupier = crupier;
