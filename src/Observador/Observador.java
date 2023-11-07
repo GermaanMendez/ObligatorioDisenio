@@ -2,18 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package Controlador;
+package Observador;
 
 /**
  *
- * @author mende
+ * @author hp
  */
-public interface VistaLogin {
-
-    public void iniciarMesa();
-
-    public void cerrar();
-    
-    public void error(String msg);
-    
+public interface Observador {
+    public void actualizar(Object evento,Observable origen);
 }

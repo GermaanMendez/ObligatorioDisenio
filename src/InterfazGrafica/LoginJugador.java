@@ -25,7 +25,7 @@ public class LoginJugador extends Login{
     }
 
     @Override
-    public void proximoCasoUso() {
+    public void iniciarMesa() {
         JOptionPane.showMessageDialog(this, "LOGIN CORRECTO JUGADOR. Proximo paso mostrar mesas disponivles");
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }

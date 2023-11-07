@@ -11,23 +11,23 @@ import java.util.ArrayList;
  * @author mende
  */
 public class Mesa {
-    
-    private Crupier crupier;
-    private ArrayList<Jugador> jugadores;
-    private ArrayList<TipoApuesta>tiposApuestasHabilitadas;
-    private ArrayList<Ronda>rondas;
-    private ArrayList<Efecto>efectos;
-    //private int nue;
-    
 
-    public Mesa(Crupier crupier) {
-        this.crupier = crupier;
+    // private Crupier crupier;
+    private ArrayList<Jugador> jugadores;
+    private ArrayList<TipoApuesta> tiposApuestasHabilitadas;
+    private ArrayList<Ronda> rondas;
+    private ArrayList<Efecto> efectos;
+
+    public Mesa(ArrayList<TipoApuesta> tiposApuestasHabilitadas) {
+        //this.crupier = crupier;
         this.jugadores = new ArrayList<Jugador>();
         this.tiposApuestasHabilitadas = new ArrayList<TipoApuesta>();
         this.rondas = new ArrayList<Ronda>();
         this.efectos = new ArrayList<Efecto>();
     }
 
+    /* el crupier es quien inicia la mesa, por lo tanto ya existe previamente
+    
     public Crupier getCrupier() {
         return crupier;
     }
@@ -35,7 +35,7 @@ public class Mesa {
     public void setCrupier(Crupier crupier) {
         this.crupier = crupier;
     }
-
+     */
     public ArrayList<Jugador> getJugadores() {
         return jugadores;
     }
@@ -67,8 +67,4 @@ public class Mesa {
     public void setEfectos(ArrayList<Efecto> efectos) {
         this.efectos = efectos;
     }
-    
-    
-    
-    
 }

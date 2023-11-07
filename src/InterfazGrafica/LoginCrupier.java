@@ -19,7 +19,8 @@ public class LoginCrupier extends Login {
     }
 
     @Override
-    public void proximoCasoUso() {
+    public void iniciarMesa() {
+        
         //VISTA INICIAR MESA
         JOptionPane.showMessageDialog(this, "LOGIN CORRECTO CRUPIER. Proximo caso de uso motrar vista para crear mesa");
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody

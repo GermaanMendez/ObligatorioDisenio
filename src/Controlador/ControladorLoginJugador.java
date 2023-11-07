@@ -19,11 +19,10 @@ public class ControladorLoginJugador extends ControladorLogin {
 
     @Override
     public void llamarLoginModelo(String cedula, String pass) throws Exception {
-       try{
+        try {
             Fachada.getInstancia().loginJugador(cedula, pass);
-       }catch(Exception ex){
-           throw new Exception(ex.getMessage());
-       }
+        } catch (Exception ex) {
+            throw new Exception(ex.getMessage());
+        }
     }
-    
 }

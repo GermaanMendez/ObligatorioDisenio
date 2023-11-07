@@ -12,7 +12,7 @@ import Logica.Fachada;
  */
 public abstract class ControladorLogin {
     
-    private VistaLogin vista;
+    VistaLogin vista;
 
     public ControladorLogin(VistaLogin vista) {
         this.vista = vista;
@@ -23,7 +23,7 @@ public abstract class ControladorLogin {
         try{
             llamarLoginModelo(cedula,pass);
             vista.cerrar();
-            vista.proximoCasoUso();
+            vista.iniciarMesa();
         }catch(Exception ex){
             //ACA HAY QUE CREAR Y MANDAR NUESTRAS PROPIAS EXCEPCIONES
             throw new Exception("Error: " + ex.getMessage());
@@ -31,7 +31,7 @@ public abstract class ControladorLogin {
         
     }
 
-    public abstract void llamarLoginModelo(String cedula, String pass)throws Exception;
+    public abstract Object llamarLoginModelo(String cedula, String pass)throws Exception;
     
     
 }
