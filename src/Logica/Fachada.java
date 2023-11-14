@@ -31,12 +31,22 @@ public  class Fachada  {
         sistemaAcceso.agregarUsuarioJugador(saldoInicial, cedula, contraseña, nombreCompleto);
     }
 
-    public boolean loginJugador(String cedula, String pass) {
+    public Usuario loginJugador(String cedula, String pass) {
         return sistemaAcceso.loginJugador(cedula, pass);
     }
 
-    public boolean loginCrupier(String cedula, String pass) {
+    public Usuario loginCrupier(String cedula, String pass) {
         return sistemaAcceso.loginCrupier(cedula, pass);
     }
+
+    public ArrayList<TipoApuesta> ObtenerTiposApuesta() {
+        return sistemaRuleta.ObtenerTiposApuesta();
+    }
+
+    public void AgrearTipoApuesta(TipoApuesta nuevoTipo) {
+        sistemaRuleta.AgrearTipoApuesta(nuevoTipo);
+    }
+    
+    
     
 }

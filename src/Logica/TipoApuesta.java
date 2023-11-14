@@ -16,6 +16,20 @@ public abstract class TipoApuesta {
         this.nombre=nombre;
     }
 
+    /**
+     * @return the factorPago
+     */
+    public int getFactorPago() {
+        return factorPago;
+    }
+
+    /**
+     * @return the nombre
+     */
+    public String getNombre() {
+        return nombre;
+    }
+
 
 
 }

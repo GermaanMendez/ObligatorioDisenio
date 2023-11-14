@@ -6,6 +6,8 @@ package inicio;
 
 import Logica.Crupier;
 import Logica.Fachada;
+import Logica.TP_ApuestaColor;
+import Logica.TipoApuesta;
 
 /**
  *
@@ -27,5 +29,8 @@ public class PrecargaDatos {
         logica.agregarUsuarioJugador(100,"203", "ccc","203ccc");
         logica.agregarUsuarioJugador(50,"204", "ddd","204ddd");
         logica.agregarUsuarioJugador(10,"205", "eee","205eee");
+        
+        TP_ApuestaColor nueva = new TP_ApuestaColor(1,"a");
+        logica.AgrearTipoApuesta(nueva);
     }
 }

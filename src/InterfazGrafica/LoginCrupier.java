@@ -6,6 +6,8 @@ package InterfazGrafica;
 
 import Controlador.ControladorLogin;
 import Controlador.ControladorLoginCrupier;
+import Logica.Crupier;
+import Logica.Usuario;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,16 +21,20 @@ public class LoginCrupier extends Login {
     }
 
     @Override
-    public void iniciarMesa() {
-        
-        //VISTA INICIAR MESA
-        JOptionPane.showMessageDialog(this, "LOGIN CORRECTO CRUPIER. Proximo caso de uso motrar vista para crear mesa");
-        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
     public ControladorLogin crearControlador() {
         return new ControladorLoginCrupier(this);
     }
+
+    @Override
+    public void ejecutarProximoCasoUso(Usuario usu) {
+        //Aca es donde debo crear la nueva vista pasandole el crupier que recibi para que la 'vista crear' mesa tenga el crupier logueado
+        //Despues junto la informacion de la configuracion de la mesa y llamo al controlador de crear mesa para que este la cree pasandole
+        //la configuracion mas el crupier logueado de esa forma el controlador podra crear la mesa y generar la relacion 1 1
+        new CrearMesa((Crupier)usu).setVisible(true);
+    }
+
+  
+
+ 
     
 }

@@ -6,6 +6,7 @@ package demo;
 
 import InterfazGrafica.Login;
 import InterfazGrafica.MenuInicio;
+import inicio.PrecargaDatos;
 
 /**
  *
@@ -19,6 +20,7 @@ public class AppEjemplo {
     public static void main(String[] args) {
 //       new VentanaMesa().setVisible(true);
 //       new Login().setVisible(true);
+         PrecargaDatos.cargar();
          new MenuInicio().setVisible(true);
     }
     

@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package Controlador;
+package InterfazGrafica;
+
+import Logica.Usuario;
 
 /**
  *
@@ -10,10 +12,11 @@ package Controlador;
  */
 public interface VistaLogin {
 
-    public void iniciarMesa();
+    public void mostrarError(String msg);
 
-    public void cerrar();
-    
-    public void error(String msg);
+    public void salir();
+
+     public void ejecutarProximoCasoUso(Usuario usu);
+
     
 }

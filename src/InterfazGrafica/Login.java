@@ -5,8 +5,7 @@
 package InterfazGrafica;
 
 import Controlador.ControladorLogin;
-import Controlador.VistaLogin;
-import Logica.Fachada;
+import Logica.Usuario;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -112,7 +111,7 @@ public abstract class Login extends javax.swing.JFrame implements VistaLogin {
        try {
             login();
         } catch (Exception ex ) {
-            error(ex.getMessage());
+            mostrarError(ex.getMessage());
         }
     }//GEN-LAST:event_btn_LoginActionPerformed
 
@@ -120,7 +119,7 @@ public abstract class Login extends javax.swing.JFrame implements VistaLogin {
         try {
             login();
         } catch (Exception ex ) {
-            error(ex.getMessage());
+            mostrarError(ex.getMessage());
         }
     }//GEN-LAST:event_txt_ContraseñaActionPerformed
   
@@ -133,14 +132,14 @@ public abstract class Login extends javax.swing.JFrame implements VistaLogin {
            throw new Exception();
        }
     }
-    @Override
-    public void cerrar() {
-        dispose();
-    }
 
     @Override
-    public void error(String msg) {
+    public void mostrarError(String msg) {
        JOptionPane.showMessageDialog(this, msg);
+    }
+      @Override
+    public void salir() {
+        this.dispose();
     }
     /**
      * @param args the command line arguments

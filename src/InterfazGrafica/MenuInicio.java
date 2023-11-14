@@ -51,20 +51,20 @@ public class MenuInicio extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(56, 56, 56)
+                .addGap(78, 78, 78)
                 .addComponent(btn_LoginCrupier)
-                .addGap(28, 28, 28)
+                .addGap(18, 18, 18)
                 .addComponent(btn_LoginUsuario)
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(104, 104, 104)
+                .addGap(121, 121, 121)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_LoginCrupier)
                     .addComponent(btn_LoginUsuario))
-                .addContainerGap(174, Short.MAX_VALUE))
+                .addContainerGap(157, Short.MAX_VALUE))
         );
 
         pack();
@@ -72,13 +72,11 @@ public class MenuInicio extends javax.swing.JFrame {
 
     private void btn_LoginCrupierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_LoginCrupierActionPerformed
         // TODO add your handling code here:
-        
         new LoginCrupier().setVisible(true);
     }//GEN-LAST:event_btn_LoginCrupierActionPerformed
 
     private void btn_LoginUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_LoginUsuarioActionPerformed
         // TODO add your handling code here:
-      
         new LoginJugador().setVisible(true);
     }//GEN-LAST:event_btn_LoginUsuarioActionPerformed
 

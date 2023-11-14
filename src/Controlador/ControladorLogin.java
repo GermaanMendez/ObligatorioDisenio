@@ -4,7 +4,9 @@
  */
 package Controlador;
 
+import InterfazGrafica.VistaLogin;
 import Logica.Fachada;
+import Logica.Usuario;
 
 /**
  *
@@ -21,17 +23,16 @@ public abstract class ControladorLogin {
     
     public void login(String cedula, String pass) throws Exception{
         try{
-            llamarLoginModelo(cedula,pass);
-            vista.cerrar();
-            vista.iniciarMesa();
+            Usuario usu = llamarLoginModelo(cedula,pass);
+            vista.ejecutarProximoCasoUso(usu);
+            vista.salir();
         }catch(Exception ex){
             //ACA HAY QUE CREAR Y MANDAR NUESTRAS PROPIAS EXCEPCIONES
             throw new Exception("Error: " + ex.getMessage());
         }
-        
     }
 
-    public abstract Object llamarLoginModelo(String cedula, String pass)throws Exception;
+    public abstract Usuario llamarLoginModelo(String cedula, String pass)throws Exception;
     
     
 }

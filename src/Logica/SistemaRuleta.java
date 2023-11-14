@@ -29,7 +29,9 @@ public class SistemaRuleta {
         tiposApuestas.add(nuevoTipo);
     }
     
-    
+    public ArrayList<TipoApuesta> ObtenerTiposApuesta(){
+        return tiposApuestas;
+    }
     
     
     

@@ -28,22 +28,22 @@ public class SistemaAcceso {
         jugadores.add(new Jugador(saldoInicial, cedula, contraseña,nombreCompleto));
     }
 
-    public boolean loginJugador(String cedula,String pass){
+    public Usuario loginJugador(String cedula,String pass){
        Jugador j = (Jugador) buscarUsuario(cedula,pass,jugadores);
        if(j!=null){
            j.setLogueado(true);
-           return true;
+           return j;
        }
-       return false;
+       return null;
     }
-    public boolean loginCrupier(String cedula,String pass){
+    public Crupier loginCrupier(String cedula,String pass){
        Crupier c = (Crupier) buscarUsuario(cedula,pass,crupiers);
        if(c!=null){
            c.setLogueado(true);
-           return true;
+           return c;
        }
-        return false;
-       //Ejecutar caso de uso iniciar mesa
+        return null;
+     
     }
     
     private Usuario buscarUsuario(String cedula, String pass,ArrayList listaBuscar ){

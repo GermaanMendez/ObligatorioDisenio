@@ -4,7 +4,9 @@
  */
 package Controlador;
 
+import InterfazGrafica.VistaLogin;
 import Logica.Fachada;
+import Logica.Usuario;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,9 +20,9 @@ public class ControladorLoginJugador extends ControladorLogin {
     }
 
     @Override
-    public void llamarLoginModelo(String cedula, String pass) throws Exception {
+    public Usuario llamarLoginModelo(String cedula, String pass) throws Exception {
         try {
-            Fachada.getInstancia().loginJugador(cedula, pass);
+            return Fachada.getInstancia().loginJugador(cedula, pass);
         } catch (Exception ex) {
             throw new Exception(ex.getMessage());
         }

@@ -1,8 +1,9 @@
 package Controlador;
 
 import Controlador.ControladorLogin;
-import Controlador.VistaLogin;
+import InterfazGrafica.VistaLogin;
 import Logica.Fachada;
+import Logica.Usuario;
 import javax.swing.JOptionPane;
 import modelo.RuletaExcepcion;
 
@@ -13,8 +14,12 @@ public class ControladorLoginCrupier extends ControladorLogin {
     }
 
     @Override
-    public Object llamarLoginModelo(String cedula, String pass) throws Exception {
-        //curso normal
-        return Fachada.getInstancia().loginCrupier(cedula, pass);
+    public Usuario llamarLoginModelo(String cedula, String pass) throws Exception {
+        //fachada debe retornar al crupier
+        try{
+            return Fachada.getInstancia().loginCrupier(cedula, pass);   
+        } catch (Exception ex) {
+            throw new Exception(ex.getMessage());
+        }
     }
 }
